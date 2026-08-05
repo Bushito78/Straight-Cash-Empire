@@ -1,0 +1,438 @@
+/*
+STRAIGHT CASH — FULL NEON PURPLE + YELLOW MFL THEME
+Banner intentionally left untouched.
+*/
+
+:root{
+  --bg:#080510;--bg2:#0f0a1b;--panel:#171024;--panel2:#211438;
+  --purple:#a64dff;--purple2:#cf85ff;--purple3:#5f1aa6;
+  --yellow:#ffe600;--yellow2:#fff36a;--white:#f8f5ff;
+  --text:#e7dff2;--muted:#a99fb7;--line:rgba(166,77,255,.34);
+  --danger:#ff5488;--success:#39efa4;--info:#65d9ff;
+  --shadow:0 14px 34px rgba(0,0,0,.35);--radius:12px;--small:8px;
+}
+
+html{min-height:100%;background:var(--bg);color-scheme:dark}
+*{box-sizing:border-box}
+body{
+  margin:0;min-height:100%;color:var(--text);
+  background:
+    radial-gradient(circle at 12% 0,rgba(166,77,255,.15),transparent 34rem),
+    radial-gradient(circle at 88% 5%,rgba(255,230,0,.06),transparent 28rem),
+    linear-gradient(180deg,#0c0715,var(--bg) 45%,#050309);
+  background-attachment:fixed;
+  font:14px/1.45 Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+}
+img{max-width:100%;height:auto}
+a{color:var(--purple2);text-underline-offset:2px;transition:.16s ease}
+a:hover,a:focus-visible{color:var(--yellow);text-shadow:0 0 10px rgba(255,230,0,.3)}
+hr{border:0;height:1px;background:linear-gradient(90deg,transparent,var(--line),transparent)}
+::selection{background:var(--yellow);color:#160921}
+
+/* NAVIGATION */
+#menu,#navigation,.navigation,.navbar,.myfantasyleague_menu{
+  position:relative;z-index:40;margin-bottom:14px;
+  background:linear-gradient(180deg,rgba(40,24,66,.98),rgba(15,9,27,.98));
+  border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--shadow),0 0 18px rgba(166,77,255,.18)
+}
+#menu ul,#navigation ul,.navigation ul,.navbar ul,.myfantasyleague_menu ul,
+ul.mflmenu,ul.mfl-menu{margin:0;padding:0;list-style:none}
+#menu>ul,#navigation>ul,.navigation>ul,.navbar>ul,.myfantasyleague_menu>ul,
+ul.mflmenu,ul.mfl-menu{display:flex;flex-wrap:wrap;gap:3px;padding:5px}
+#menu li,#navigation li,.navigation li,.navbar li,.myfantasyleague_menu li,
+ul.mflmenu li,ul.mfl-menu li{position:relative;list-style:none}
+#menu a,#navigation a,.navigation a,.navbar a,.myfantasyleague_menu a,
+ul.mflmenu a,ul.mfl-menu a{
+  display:flex;align-items:center;min-height:38px;padding:8px 13px;
+  color:var(--white)!important;background:transparent;border:1px solid transparent;
+  border-radius:8px;font-weight:800;letter-spacing:.03em;text-decoration:none;
+  text-transform:uppercase;transition:.16s ease
+}
+#menu a:hover,#navigation a:hover,.navigation a:hover,.navbar a:hover,
+.myfantasyleague_menu a:hover,ul.mflmenu a:hover,ul.mfl-menu a:hover{
+  color:#160921!important;background:var(--yellow);border-color:var(--yellow2);
+  box-shadow:0 0 16px rgba(255,230,0,.3);text-shadow:none;transform:translateY(-1px)
+}
+#menu li ul,#navigation li ul,.navigation li ul,.navbar li ul,
+.myfantasyleague_menu li ul,ul.mflmenu li ul,ul.mfl-menu li ul{
+  min-width:215px;padding:7px;background:rgba(15,9,27,.99);
+  border:1px solid var(--line);border-radius:10px;box-shadow:0 20px 45px rgba(0,0,0,.48)
+}
+#menu li ul a,#navigation li ul a,.navigation li ul a,.navbar li ul a,
+.myfantasyleague_menu li ul a,ul.mflmenu li ul a,ul.mfl-menu li ul a{
+  min-height:34px;padding:7px 10px;text-transform:none;letter-spacing:0
+}
+
+/* REPORTS AND HOMEPAGE MODULES */
+.report,.homepagemodule,.module,.widget,.contentmodule,
+#standings,#rosters,#transactions,#scores,#live_scoring,#draft_results,
+#message_board,#polls,#calendar{
+  max-width:100%;margin-bottom:16px;overflow:hidden;color:var(--text);
+  background:linear-gradient(180deg,rgba(30,19,49,.98),rgba(16,10,28,.98));
+  border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--shadow),0 0 18px rgba(166,77,255,.16);
+  transition:border-color .16s ease,box-shadow .16s ease,transform .16s ease
+}
+.report:hover,.homepagemodule:hover,.module:hover,.widget:hover{
+  border-color:rgba(207,133,255,.58)
+}
+.report h2,.report h3,.report h4,.homepagemodule h2,.homepagemodule h3,
+.homepagemodule h4,.module h2,.module h3,.module h4,.widget h2,.widget h3,
+.widget h4,.reportcaption,.modulecaption,.homepagemodulecaption,caption{
+  margin:0;padding:11px 14px;color:var(--yellow)!important;
+  background:linear-gradient(110deg,rgba(101,27,170,.98),rgba(46,20,76,.98) 65%,rgba(27,15,45,.98));
+  border:0;border-bottom:1px solid rgba(255,230,0,.25);
+  font-size:14px;font-weight:900;letter-spacing:.055em;text-align:left;
+  text-transform:uppercase;text-shadow:0 0 12px rgba(255,230,0,.2)
+}
+.report h2 a,.report h3 a,.homepagemodule h2 a,.homepagemodule h3 a,
+.reportcaption a,.modulecaption a,caption a{color:inherit!important;text-decoration:none}
+
+/* TABLES */
+.report table,.homepagemodule table,.module table,.widget table,
+table.report,table.sortable,table.standard{
+  width:100%;max-width:100%;border-collapse:separate;border-spacing:0;
+  color:var(--text);background:transparent
+}
+.report table th,.homepagemodule table th,.module table th,.widget table th,
+table.report th,table.sortable th,table.standard th{
+  padding:9px 10px;color:var(--yellow);
+  background:rgba(84,34,135,.9);border:0;border-right:1px solid rgba(255,255,255,.05);
+  border-bottom:1px solid rgba(255,230,0,.24);font-size:11px;font-weight:900;
+  letter-spacing:.045em;text-align:left;text-transform:uppercase;vertical-align:middle
+}
+.report table td,.homepagemodule table td,.module table td,.widget table td,
+table.report td,table.sortable td,table.standard td{
+  padding:9px 10px;color:var(--text);background:rgba(20,13,34,.94);
+  border:0;border-right:1px solid rgba(255,255,255,.04);
+  border-bottom:1px solid rgba(255,255,255,.065);vertical-align:middle;
+  transition:.15s ease
+}
+.report table tr:nth-child(even) td,.homepagemodule table tr:nth-child(even) td,
+.module table tr:nth-child(even) td,.widget table tr:nth-child(even) td,
+table.report tr:nth-child(even) td,table.sortable tr:nth-child(even) td,
+table.standard tr:nth-child(even) td{background:rgba(29,18,49,.94)}
+.report table tr:hover td,.homepagemodule table tr:hover td,.module table tr:hover td,
+.widget table tr:hover td,table.report tr:hover td,table.sortable tr:hover td,
+table.standard tr:hover td{background:rgba(71,35,111,.72);color:var(--white)}
+.oddtablerow td,tr.oddtablerow td,tr.odd td{background:rgba(20,13,34,.94)!important}
+.eventablerow td,tr.eventablerow td,tr.even td{background:rgba(29,18,49,.94)!important}
+.oddtablerow:hover td,.eventablerow:hover td,tr.odd:hover td,tr.even:hover td{
+  background:rgba(71,35,111,.72)!important
+}
+
+/* STANDINGS */
+#standings .franchise,#standings .team,.standings .franchise,.standings .team,
+table.standings td.franchise,table.standings td.team{font-weight:850}
+#standings .franchise a,#standings .team a,.standings .franchise a,
+.standings .team a{color:var(--white)}
+#standings .franchise a:hover,#standings .team a:hover,
+.standings .franchise a:hover,.standings .team a:hover{color:var(--yellow)}
+#standings .wins,#standings .pct,.standings .wins,.standings .pct{
+  color:var(--yellow);font-weight:900
+}
+#standings .points,#standings .pf,.standings .points,.standings .pf{
+  color:var(--purple2);font-weight:800
+}
+.division,.divisionheader,tr.division td,tr.divisionheader td,.report .division td{
+  color:var(--yellow)!important;
+  background:linear-gradient(90deg,rgba(94,29,158,.92),rgba(31,16,51,.94))!important;
+  font-weight:900!important;letter-spacing:.04em;text-transform:uppercase
+}
+.playoff,.clinched,.leader,.firstplace,.champion{
+  color:var(--yellow)!important;font-weight:900!important
+}
+
+/* ROSTERS / PLAYERS */
+#rosters .player,.rosters .player,.roster .player,.playername,td.player,td.playername{
+  font-weight:800
+}
+#rosters .player a,.rosters .player a,.roster .player a,.playername a,
+td.player a,td.playername a{color:var(--white)}
+#rosters .player a:hover,.rosters .player a:hover,.roster .player a:hover,
+.playername a:hover{color:var(--yellow)}
+.position,.pos,td.position,td.pos{
+  color:var(--yellow2);font-size:11px;font-weight:900;letter-spacing:.04em
+}
+.nflteam,.teamabbr,td.nflteam,td.teamabbr{
+  color:var(--muted);font-size:11px;font-weight:750
+}
+.injured,.injury,.ir,.out{color:var(--danger)!important;font-weight:850}
+.questionable,.doubtful{color:var(--yellow)!important;font-weight:850}
+.starter,.starting,.activeplayer{border-left:3px solid var(--yellow)!important}
+.bench,.reserve{opacity:.85}
+
+/* SCOREBOARDS / MATCHUPS */
+.matchup,.scoreboard,.live_scoring .matchup,#live_scoring .matchup,
+.weeklyresults .matchup,div[id*="matchup"]{
+  margin:10px;overflow:hidden;
+  background:linear-gradient(145deg,rgba(34,21,56,.98),rgba(13,8,23,.98));
+  border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:0 12px 28px rgba(0,0,0,.3);
+  transition:.16s ease
+}
+.matchup:hover,.scoreboard:hover,.live_scoring .matchup:hover,
+#live_scoring .matchup:hover,.weeklyresults .matchup:hover{
+  border-color:rgba(255,230,0,.55);
+  box-shadow:var(--shadow),0 0 18px rgba(255,230,0,.15);
+  transform:translateY(-2px)
+}
+.matchup .franchise,.matchup .team,.scoreboard .franchise,.scoreboard .team,
+.live_scoring .franchise,.live_scoring .team{color:var(--white);font-weight:900}
+.matchup .score,.scoreboard .score,.live_scoring .score,#scores .score,
+#live_scoring .score,.weeklyresults .score{
+  color:var(--yellow);font-size:1.35em;font-weight:950;
+  font-variant-numeric:tabular-nums;text-shadow:0 0 14px rgba(255,230,0,.22)
+}
+.matchup .projected,.scoreboard .projected,.live_scoring .projected,.projectedscore{
+  color:var(--purple2);font-weight:850
+}
+.matchup .winner,.scoreboard .winner,.live_scoring .winner,.winner{
+  color:var(--yellow)!important;font-weight:950!important
+}
+.matchup .loser,.scoreboard .loser,.live_scoring .loser,.loser{color:var(--muted)}
+.matchup .versus,.matchup .vs,.scoreboard .versus,.scoreboard .vs{
+  color:var(--purple2);font-size:11px;font-weight:900;letter-spacing:.1em;text-transform:uppercase
+}
+
+/* FORMS */
+input[type=text],input[type=email],input[type=password],input[type=number],
+input[type=search],input[type=date],input[type=time],input[type=url],select,textarea{
+  max-width:100%;min-height:36px;padding:7px 10px;color:var(--white);
+  background:rgba(8,5,16,.84);border:1px solid var(--line);
+  border-radius:var(--small);box-shadow:inset 0 1px 4px rgba(0,0,0,.35);
+  transition:.16s ease
+}
+textarea{min-height:96px;resize:vertical}
+input::placeholder,textarea::placeholder{color:#81758e}
+input[type=text]:focus,input[type=email]:focus,input[type=password]:focus,
+input[type=number]:focus,input[type=search]:focus,input[type=date]:focus,
+input[type=time]:focus,input[type=url]:focus,select:focus,textarea:focus{
+  outline:none;background:#0d0818;border-color:var(--yellow);
+  box-shadow:0 0 0 3px rgba(255,230,0,.12),0 0 16px rgba(255,230,0,.12)
+}
+input[type=checkbox],input[type=radio]{accent-color:var(--purple)}
+button,input[type=button],input[type=submit],input[type=reset],
+.button,.btn,a.button,a.btn{
+  display:inline-flex;align-items:center;justify-content:center;min-height:36px;
+  padding:8px 14px;color:#170923!important;
+  background:linear-gradient(180deg,var(--yellow2),var(--yellow));
+  border:1px solid var(--yellow2);border-radius:var(--small);
+  box-shadow:0 7px 16px rgba(0,0,0,.24),0 0 12px rgba(255,230,0,.15);
+  cursor:pointer;font-weight:900;letter-spacing:.035em;text-decoration:none!important;
+  text-transform:uppercase;transition:.16s ease
+}
+button:hover,input[type=button]:hover,input[type=submit]:hover,input[type=reset]:hover,
+.button:hover,.btn:hover,a.button:hover,a.btn:hover{
+  color:var(--white)!important;
+  background:linear-gradient(180deg,var(--purple2),var(--purple));
+  border-color:var(--purple2);
+  box-shadow:0 9px 20px rgba(0,0,0,.3),0 0 18px rgba(166,77,255,.34);
+  transform:translateY(-1px)
+}
+button:disabled,input:disabled,select:disabled,textarea:disabled{
+  cursor:not-allowed;filter:grayscale(.5);opacity:.52
+}
+
+/* TABS / REPORT NAV / PAGINATION */
+.tabs,.tabmenu,.reportnavigation,.report-navigation,.subnav,.subnavigation,.pagination{
+  display:flex;flex-wrap:wrap;gap:5px;margin:10px 0;padding:6px;
+  background:rgba(20,13,35,.85);border:1px solid var(--line);border-radius:var(--small)
+}
+.tabs a,.tabmenu a,.reportnavigation a,.report-navigation a,.subnav a,
+.subnavigation a,.pagination a,.pagination span{
+  display:inline-flex;align-items:center;min-height:32px;padding:6px 10px;
+  color:var(--text);background:rgba(40,25,66,.8);
+  border:1px solid rgba(166,77,255,.26);border-radius:7px;
+  font-weight:800;text-decoration:none
+}
+.tabs a:hover,.tabmenu a:hover,.reportnavigation a:hover,.report-navigation a:hover,
+.subnav a:hover,.subnavigation a:hover,.pagination a:hover{
+  color:#170923;background:var(--yellow);border-color:var(--yellow2);text-shadow:none
+}
+.tabs .active,.tabmenu .active,.reportnavigation .active,.report-navigation .active,
+.subnav .active,.subnavigation .active,.pagination .current,.pagination .active{
+  color:var(--yellow)!important;background:rgba(97,31,162,.88)!important;
+  border-color:rgba(255,230,0,.48)!important
+}
+
+/* DRAFT / AUCTION */
+.draftclock,#draftclock,.draft-clock,.auctionclock,#auctionclock{
+  padding:10px 14px;color:var(--yellow);background:#0c0716;
+  border:1px solid rgba(255,230,0,.72);border-radius:var(--small);
+  box-shadow:0 0 18px rgba(255,230,0,.15);
+  font-size:1.2em;font-weight:950;font-variant-numeric:tabular-nums;text-align:center
+}
+.onclock,.on-the-clock,.currentpick,.current-pick,tr.onclock td,tr.currentpick td{
+  color:var(--white)!important;
+  background:linear-gradient(90deg,rgba(104,32,174,.94),rgba(53,24,87,.96))!important;
+  box-shadow:inset 4px 0 var(--yellow)
+}
+.drafted,.playerdrafted,tr.drafted td{opacity:.62}
+.picknumber,.round,td.picknumber,td.round,.nomination,.highbid,.bidamount{
+  color:var(--yellow);font-weight:900
+}
+
+/* TRANSACTIONS / TRADES */
+.transaction .add,.added,.acquire,.acquired{color:var(--success)!important;font-weight:850}
+.transaction .drop,.dropped,.release,.released{color:var(--danger)!important;font-weight:850}
+.trade .from,.trade .to,.tradeoffer .from,.tradeoffer .to{
+  color:var(--purple2);font-weight:850
+}
+.pending,.proposed{color:var(--yellow)!important}
+.accepted,.approved,.complete,.completed{color:var(--success)!important}
+.rejected,.denied,.cancelled,.canceled{color:var(--danger)!important}
+
+/* NEWS / MESSAGE BOARD / POLLS */
+.article+.article,.newsarticle+.newsarticle,.message+.message,.post+.post{
+  border-top:1px solid rgba(166,77,255,.18)
+}
+.article h3,.newsarticle h3,.message .subject,.post .subject,.thread .subject{
+  color:var(--yellow)
+}
+.author,.postedby,.timestamp,.date,.time,.articlemeta,.meta{
+  color:var(--muted);font-size:11px
+}
+blockquote,.quote,.postquote{
+  margin:10px 0;padding:10px 12px;color:#d9d1e6;
+  background:rgba(8,5,16,.64);border-left:3px solid var(--purple);
+  border-radius:0 8px 8px 0
+}
+.pollbar,.pollresult,.vote-bar{
+  overflow:hidden;min-height:9px;
+  background:linear-gradient(90deg,var(--purple),var(--yellow));border-radius:999px
+}
+
+/* ALERTS */
+.warning,.alert,.error,.success,.notice,.info,.confirmation,.messagebox{
+  margin:10px 0;padding:10px 12px;color:var(--text);
+  background:rgba(25,16,42,.96);border:1px solid var(--line);
+  border-left-width:4px;border-radius:var(--small)
+}
+.warning,.alert{border-left-color:var(--yellow)}
+.error{border-left-color:var(--danger)}
+.success,.confirmation{border-left-color:var(--success)}
+.info,.notice{border-left-color:var(--info)}
+
+/* MODALS */
+.tooltip,.tip,.popup,.modal,.dialog,.ui-dialog,.ui-widget-content{
+  color:var(--text)!important;background:rgba(15,9,26,.99)!important;
+  border:1px solid var(--line)!important;border-radius:var(--radius)!important;
+  box-shadow:0 24px 70px rgba(0,0,0,.58),0 0 18px rgba(166,77,255,.18)!important
+}
+.ui-dialog-titlebar,.modal-header,.dialog-header{
+  color:var(--yellow)!important;
+  background:linear-gradient(110deg,var(--purple3),#28143f)!important;
+  border:0!important;border-bottom:1px solid rgba(255,230,0,.24)!important
+}
+
+/* CALENDAR */
+.calendar .today,table.calendar .today,td.today{
+  background:rgba(255,230,0,.12)!important;
+  box-shadow:inset 0 0 0 2px rgba(255,230,0,.55)
+}
+.calendar .event,table.calendar .event{color:var(--purple2);font-weight:800}
+
+/* LOGOS */
+.report .franchiselogo,.report .teamlogo,.homepagemodule .franchiselogo,
+.homepagemodule .teamlogo,.matchup .franchiselogo,.matchup .teamlogo{
+  object-fit:contain;filter:drop-shadow(0 4px 10px rgba(0,0,0,.34));
+  transition:.16s ease
+}
+.report tr:hover .franchiselogo,.report tr:hover .teamlogo,
+.matchup:hover .franchiselogo,.matchup:hover .teamlogo{
+  filter:drop-shadow(0 4px 10px rgba(0,0,0,.34))
+         drop-shadow(0 0 8px rgba(166,77,255,.28));
+  transform:scale(1.035)
+}
+
+/* FOOTER */
+#footer,.footer,.pagefooter{
+  margin-top:24px;padding:18px 12px;color:var(--muted);
+  background:rgba(7,4,12,.72);border-top:1px solid rgba(166,77,255,.2);
+  text-align:center
+}
+#footer a,.footer a,.pagefooter a{color:var(--purple2)}
+
+/* SCROLLBARS */
+*{scrollbar-width:thin;scrollbar-color:var(--purple) #0d0817}
+*::-webkit-scrollbar{width:11px;height:11px}
+*::-webkit-scrollbar-track{background:#0d0817}
+*::-webkit-scrollbar-thumb{
+  background:linear-gradient(180deg,var(--purple2),var(--purple3));
+  border:2px solid #0d0817;border-radius:999px
+}
+*::-webkit-scrollbar-thumb:hover{
+  background:linear-gradient(180deg,var(--yellow2),var(--yellow))
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  body{font-size:13px;background-attachment:scroll}
+  #menu>ul,#navigation>ul,.navigation>ul,.navbar>ul,.myfantasyleague_menu>ul,
+  ul.mflmenu,ul.mfl-menu{justify-content:center}
+  #menu a,#navigation a,.navigation a,.navbar a,.myfantasyleague_menu a,
+  ul.mflmenu a,ul.mfl-menu a{min-height:36px;padding:7px 10px;font-size:12px}
+  .homepagecolumn,.homepagecolumn1,.homepagecolumn2,.homepagecolumn3,
+  .homecolumn,.column{
+    float:none!important;width:100%!important;max-width:100%!important;
+    margin-left:0!important;margin-right:0!important
+  }
+  .report,.homepagemodule,.module,.widget{
+    overflow-x:auto;-webkit-overflow-scrolling:touch
+  }
+  .report table,.homepagemodule table,.module table,.widget table{min-width:620px}
+}
+@media(max-width:600px){
+  #menu>ul,#navigation>ul,.navigation>ul,.navbar>ul,.myfantasyleague_menu>ul,
+  ul.mflmenu,ul.mfl-menu{
+    display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px
+  }
+  #menu a,#navigation a,.navigation a,.navbar a,.myfantasyleague_menu a,
+  ul.mflmenu a,ul.mfl-menu a{
+    justify-content:center;min-height:40px;padding:7px 5px;font-size:11px;text-align:center
+  }
+  .report,.homepagemodule,.module,.widget,.matchup,.scoreboard{border-radius:9px}
+  .report h2,.report h3,.homepagemodule h2,.homepagemodule h3,
+  .modulecaption,.reportcaption,caption{padding:10px;font-size:12px}
+  .report table th,.homepagemodule table th,.module table th,.widget table th{
+    padding:8px;font-size:10px
+  }
+  .report table td,.homepagemodule table td,.module table td,.widget table td{padding:8px}
+  button,input[type=button],input[type=submit],input[type=reset],.button,.btn,
+  a.button,a.btn,input[type=text],input[type=email],input[type=password],
+  input[type=number],input[type=search],input[type=date],input[type=time],
+  input[type=url],select,textarea{min-height:40px}
+  .tabs,.tabmenu,.reportnavigation,.report-navigation,.subnav,.subnavigation,.pagination{
+    overflow-x:auto;flex-wrap:nowrap;-webkit-overflow-scrolling:touch
+  }
+  .tabs a,.tabmenu a,.reportnavigation a,.report-navigation a,.subnav a,
+  .subnavigation a,.pagination a,.pagination span{flex:0 0 auto;white-space:nowrap}
+}
+@media(max-width:390px){
+  #menu>ul,#navigation>ul,.navigation>ul,.navbar>ul,.myfantasyleague_menu>ul,
+  ul.mflmenu,ul.mfl-menu{grid-template-columns:1fr}
+  .report table,.homepagemodule table,.module table,.widget table{min-width:560px}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    scroll-behavior:auto!important;transition-duration:.01ms!important;
+    animation-duration:.01ms!important;animation-iteration-count:1!important
+  }
+}
+@media print{
+  html,body{color:#000!important;background:#fff!important}
+  #menu,#navigation,.navigation,.navbar,.myfantasyleague_menu,
+  button,input[type=button],input[type=submit],.button,.btn{display:none!important}
+  .report,.homepagemodule,.module,.widget{
+    color:#000!important;background:#fff!important;border:1px solid #bbb!important;
+    box-shadow:none!important
+  }
+  .report table td,.homepagemodule table td,.module table td,.widget table td{
+    color:#000!important;background:#fff!important;border-color:#ccc!important
+  }
+  .report table th,.homepagemodule table th,.module table th,.widget table th{
+    color:#000!important;background:#eee!important;border-color:#bbb!important
+  }
+}
