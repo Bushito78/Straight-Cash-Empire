@@ -436,3 +436,170 @@ blockquote,.quote,.postquote{
     color:#000!important;background:#eee!important;border-color:#bbb!important
   }
 }
+
+/* =====================================================
+   STRAIGHT CASH — TOP AREA FIX
+   Hides stock skin selector and removes blue MFL styling
+   ===================================================== */
+
+/* Hide the stock Select Skin bar */
+#skin_select,
+#skinselect,
+.skin_select,
+.skinselect,
+#skin_selector,
+.skin-selector,
+#select_skin,
+.select-skin {
+  display: none !important;
+}
+
+/* Hide the stock skin colour links if they are inside a table or div */
+div:has(> a[href*="SKIN="]),
+div:has(> a[href*="skin="]),
+table:has(a[href*="SKIN="]),
+table:has(a[href*="skin="]) {
+  display: none !important;
+}
+
+/* Main MFL top header/navigation */
+#MFLTop,
+#MFLHeader,
+#topmenu,
+#top_menu,
+#league_menu,
+.league_menu,
+.leaguemenu,
+#menu,
+#navigation,
+.navigation,
+.myfantasyleague_menu {
+  color: #f8f5ff !important;
+  background:
+    linear-gradient(
+      180deg,
+      #30134f 0%,
+      #160b27 55%,
+      #0b0613 100%
+    ) !important;
+  border-color: rgba(166, 77, 255, 0.55) !important;
+  box-shadow:
+    0 0 0 1px rgba(166, 77, 255, 0.2),
+    0 0 22px rgba(166, 77, 255, 0.22) !important;
+}
+
+/* Remove stock blue backgrounds from top cells */
+#MFLTop td,
+#MFLHeader td,
+#topmenu td,
+#top_menu td,
+#league_menu td,
+.league_menu td,
+.leaguemenu td {
+  color: #f8f5ff !important;
+  background: transparent !important;
+  border-color: rgba(166, 77, 255, 0.25) !important;
+}
+
+/* Top navigation links */
+#MFLTop a,
+#MFLHeader a,
+#topmenu a,
+#top_menu a,
+#league_menu a,
+.league_menu a,
+.leaguemenu a {
+  color: #f8f5ff !important;
+  background: transparent !important;
+  border-color: transparent !important;
+  text-decoration: none !important;
+  text-shadow: none !important;
+}
+
+/* Top navigation hover */
+#MFLTop a:hover,
+#MFLHeader a:hover,
+#topmenu a:hover,
+#top_menu a:hover,
+#league_menu a:hover,
+.league_menu a:hover,
+.leaguemenu a:hover {
+  color: #160921 !important;
+  background: #ffe600 !important;
+  border-color: #fff36a !important;
+  box-shadow: 0 0 14px rgba(255, 230, 0, 0.32) !important;
+}
+
+/* League Tabs area */
+#league_tabs,
+#leaguetabs,
+.league_tabs,
+.leaguetabs,
+#tabs,
+.tabs {
+  color: #f8f5ff !important;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(37, 21, 61, 0.98),
+      rgba(14, 8, 25, 0.98)
+    ) !important;
+  border: 1px solid rgba(166, 77, 255, 0.42) !important;
+  border-radius: 10px !important;
+  box-shadow: 0 0 18px rgba(166, 77, 255, 0.18) !important;
+}
+
+/* League tab links */
+#league_tabs a,
+#leaguetabs a,
+.league_tabs a,
+.leaguetabs a,
+#tabs a,
+.tabs a {
+  color: #f8f5ff !important;
+  background: rgba(76, 31, 125, 0.48) !important;
+  border: 1px solid rgba(166, 77, 255, 0.3) !important;
+  border-radius: 7px !important;
+}
+
+/* Active and hovered tabs */
+#league_tabs a:hover,
+#leaguetabs a:hover,
+.league_tabs a:hover,
+.leaguetabs a:hover,
+#tabs a:hover,
+.tabs a:hover,
+#league_tabs .active,
+#leaguetabs .active,
+.league_tabs .active,
+.leaguetabs .active,
+#tabs .active,
+.tabs .active {
+  color: #160921 !important;
+  background: #ffe600 !important;
+  border-color: #fff36a !important;
+  text-shadow: none !important;
+}
+
+/* Remove old blue gradients and borders broadly from top controls */
+select,
+input[type="button"],
+input[type="submit"],
+button {
+  background-image: none !important;
+}
+
+/* Banner image area */
+#league_banner,
+.league_banner,
+#banner,
+.banner,
+#header img,
+.header img {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  max-width: 100% !important;
+  height: auto !important;
+  margin: 0 auto !important;
+}
