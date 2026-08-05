@@ -603,3 +603,7 @@ button {
   height: auto !important;
   margin: 0 auto !important;
 }
+
+body {
+  outline: 8px solid red !important;
+}
